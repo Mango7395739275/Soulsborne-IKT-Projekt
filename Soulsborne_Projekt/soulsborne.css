@@ -1,0 +1,21 @@
+body {
+    min-height: 1000px;
+    min-width: 1000px;
+    background: radial-gradient(rgb(50,50,50), black);
+}
+
+@font-face {
+  font-family: "myFont";
+  src: url("Seagram\ tfb.ttf");
+}
+
+h1 {
+    font-family: myFont;
+    text-align: center;
+}
+
+* {
+    color: white;
+    letter-spacing: 3px;
+}
+
