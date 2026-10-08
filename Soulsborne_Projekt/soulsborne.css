@@ -5,17 +5,13 @@ body {
 }
 
 @font-face {
-  font-family: "myFont";
+  font-family: "souls";
   src: url("Seagram\ tfb.ttf");
 }
 
-h1 {
-    font-family: myFont;
-    text-align: center;
-}
 
 * {
     color: white;
     letter-spacing: 3px;
+    font-family: souls;
 }
-
