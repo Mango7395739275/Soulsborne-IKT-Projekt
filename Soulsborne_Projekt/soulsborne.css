@@ -5,7 +5,7 @@ body {
     text-align: center;
     min-height: 1000px;
     min-width: 1000px;
-    background: radial-gradient(rgb(50,50,50), black);
+    background: linear-gradient(to right ,black, rgb(50,50,50), black);
 }
 
 @font-face {
@@ -45,6 +45,44 @@ ul {
 .pics {
     border-radius: 25px;
     max-width: 600px;
-    max-height: 600px;
+    max-height: 330px;
+    filter: blur(0.7px);
 }
 
+.pics:hover {
+    transform: scale(1.1);      
+    filter: brightness(1.15);
+    filter: blur(0);  
+    transition: 0.25s ease-in-out;
+}
+
+.games {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.carousel {
+    min-width: 600px;
+    max-width: 1500px;
+    overflow-x: auto;
+    display: flex;
+}
+
+.carousel::-webkit-scrollbar {display: none;}
+
+.gallery {
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding-right: 50px;
+    animation: carousel 27s linear infinite;
+}
+
+@keyframes carousel {
+    from {transform: translateX(0%);}
+    to {transform: translateX(-100%);}
+}
