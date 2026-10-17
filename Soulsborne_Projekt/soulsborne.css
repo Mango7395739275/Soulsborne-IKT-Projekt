@@ -1,13 +1,19 @@
 body {
+    padding-top: 35px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     min-height: 100vh; 
-    width: 100%;      
+    width: 100%;     
     margin: 0;         
     background: linear-gradient(to right, black, rgb(50,50,50), black);
     background-attachment: fixed; 
+}
+
+body > *:not(footer){
+    margin: 0 auto;
+    width: 90%;
 }
 
 
@@ -23,12 +29,14 @@ html {scroll-behavior: smooth;}
     letter-spacing: 3px;
     font-family: souls;
     text-decoration: none;
+    box-sizing: border-box;
 }
 
 
  
 .fontani {
     animation: font 4s linear infinite;
+    margin-bottom: 30px;
 }
 
 @keyframes font {
@@ -57,6 +65,16 @@ ul {
 
 
 
+.world {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.world > img {max-width: 900px;}
+
+
+
 .fontproblems {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-decoration: none;
@@ -69,13 +87,17 @@ ul {
     border-radius: 25px;
     max-width: 600px;
     max-height: 330px;
-    max-width: 90vw;
+    height: 100%;
 }
 
-.pics:hover {
-    transform: scale(1.1);      
-    filter: brightness(1.15);
-    transition: 0.25s ease-in-out;
+@media (hover: hover) {
+
+    .pics:hover, #aboutpic:hover {
+        transform: scale(1.1);      
+        filter: brightness(1.15);
+        transition: 0.25s ease-in-out;
+    }
+
 }
 
 .games {
@@ -98,9 +120,9 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
-    padding-right: 50px;
-    animation: carousel 40s linear infinite;
+    gap: 70px;
+    padding-right: 70px;
+    animation: carousel 23s linear infinite;
 }
 
 @keyframes carousel {
@@ -110,8 +132,88 @@ ul {
 
 
 
+.about, .abtcol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.abtcol {text-align: justify;}
+
+#aboutpic {
+    height: auto;
+    float: right;
+    margin-left: 15px;
+}
+
+.aboutlayout {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
 footer {
+    text-align: center;
+    background-color: rgb(20, 20, 20);
+    padding-left: 20%;
+    padding-right: 20%;
     width: 100%;
-    background-color: black;
-    height: 150px;
+}
+
+.fontexception, .fontexception > *  {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: small;
+    filter: brightness(0.5);
+}
+
+
+
+@media (max-width: 900px) {
+    .aboutlayout {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    body > *:not(footer) {
+        width: 70%; 
+    }
+    
+    #aboutpic {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        float: none;
+        margin-top: 15px;
+        transform: scale(0.8);
+    }
+
+    .pics {
+        transform: scale(0.7);
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+        list-style: none;
+        text-decoration: underline ;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background: linear-gradient(to right, gray, white, gray);
+    }
+    
+    body * {color: black;}
+
+    footer {background-color: gray;}
+
+    @keyframes font {
+    0% {color: black;}
+    50% {color: gray;}
+    100% {color: black;}
+    }
 }
