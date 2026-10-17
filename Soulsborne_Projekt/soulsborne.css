@@ -3,14 +3,17 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    min-height: 1000px;
-    min-width: 1000px;
-    background: linear-gradient(to right ,black, rgb(50,50,50), black);
+    min-height: 100vh; 
+    width: 100%;      
+    margin: 0;         
+    background: linear-gradient(to right, black, rgb(50,50,50), black);
+    background-attachment: fixed; 
 }
+
 
 @font-face {
   font-family: "souls";
-  src: url("Seagram\ tfb.ttf");
+  src: url("Assets/Seagram\ tfb.ttf");
 }
 
 html {scroll-behavior: smooth;}
@@ -23,16 +26,35 @@ html {scroll-behavior: smooth;}
 }
 
 
-nav {
-    display: flex;
-    justify-content: center;
-
+ 
+.fontani {
+    animation: font 4s linear infinite;
 }
+
+@keyframes font {
+    0% {color: lightgray;}
+    50% {color: gray;}
+    100% {color: lightgray;}
+}
+
+
+
 ul {
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    text-align: center;
+    justify-content: space-evenly;
 }
+
+
+
+.divider {
+    background-color: white;
+    width: 90%;
+    z-index: 2;
+    filter: brightness(0.4);
+}
+
 
 
 .fontproblems {
@@ -42,17 +64,17 @@ ul {
 }
 
 
+
 .pics {
     border-radius: 25px;
     max-width: 600px;
     max-height: 330px;
-    filter: blur(0.7px);
+    max-width: 90vw;
 }
 
 .pics:hover {
     transform: scale(1.1);      
     filter: brightness(1.15);
-    filter: blur(0);  
     transition: 0.25s ease-in-out;
 }
 
@@ -62,9 +84,8 @@ ul {
     align-items: center;
 }
 
-
 .carousel {
-    min-width: 600px;
+    width: 100%;
     max-width: 1500px;
     overflow-x: auto;
     display: flex;
@@ -79,10 +100,18 @@ ul {
     align-items: center;
     gap: 50px;
     padding-right: 50px;
-    animation: carousel 27s linear infinite;
+    animation: carousel 40s linear infinite;
 }
 
 @keyframes carousel {
     from {transform: translateX(0%);}
     to {transform: translateX(-100%);}
+}
+
+
+
+footer {
+    width: 100%;
+    background-color: black;
+    height: 150px;
 }
