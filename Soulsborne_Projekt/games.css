@@ -1,0 +1,143 @@
+body {
+    padding-top: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh; 
+    width: 100%;     
+    margin: 0;         
+    background: linear-gradient(to right, black, rgb(50,50,50), black);
+    background-attachment: fixed; 
+}
+
+body > *:not(footer){
+    margin: 0 auto;
+    width: 90%;
+}
+
+
+@font-face {
+  font-family: "souls";
+  src: url("Assets/Seagram\ tfb.ttf");
+}
+
+html {scroll-behavior: smooth;}
+
+* {
+    color: white;
+    letter-spacing: 3px;
+    font-family: souls;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+
+ 
+.fontani {
+    animation: font 4s linear infinite;
+    margin-bottom: 30px;
+}
+
+@keyframes font {
+    0% {color: lightgray;}
+    50% {color: gray;}
+    100% {color: lightgray;}
+}
+
+
+
+ul {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+
+
+.divider {
+    background-color: white;
+    width: 90%;
+    z-index: 2;
+    filter: brightness(0.4);
+}
+
+
+
+.pics {
+    border-radius: 25px;
+    max-width: 600px;
+    max-height: 330px;
+    height: 100%;
+}
+
+@media (hover: hover) {
+
+    .pics:hover, #aboutpic:hover {
+        transform: scale(1.1);      
+        filter: brightness(1.15);
+        transition: 0.25s ease-in-out;
+    }
+
+}
+
+
+
+footer {
+    text-align: center;
+    background-color: rgb(20, 20, 20);
+    padding-left: 20%;
+    padding-right: 20%;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.fontexception, .fontexception > *  {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 13px;
+    filter: brightness(0.5);
+}
+
+
+
+@media (max-width: 900px) {
+    
+    body > *:not(footer) {
+        width: 70%; 
+    }
+
+    .pics {
+        transform: scale(0.7);
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+        list-style: none;
+        text-decoration: underline;
+    }
+
+    body *:not(.fontexception, .fontexception > *) {font-size: 93%;}
+
+    .fontexception, .fontexception > * {font-size: 72%;}
+}
+
+
+@media (prefers-color-scheme: light) {
+    body {
+        background: linear-gradient(to right, gray, white, gray);
+    }
+    
+    body * {color: black;}
+
+    footer {background-color: gray;}
+
+    @keyframes font {
+    0% {color: black;}
+    50% {color: gray;}
+    100% {color: black;}
+    }
+}
