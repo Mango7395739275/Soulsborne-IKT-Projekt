@@ -101,6 +101,26 @@ footer {
 
 
 
+.intro {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.textnimage {
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+
+
+
 @media (max-width: 900px) {
     
     body > *:not(footer) {
