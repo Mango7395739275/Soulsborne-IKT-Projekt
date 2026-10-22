@@ -19,7 +19,7 @@ body > *:not(footer){
 
 @font-face {
   font-family: "souls";
-  src: url("Assets/Seagram\ tfb.ttf");
+  src: url("Assets/other/Seagram\ tfb.ttf");
 }
 
 html {scroll-behavior: smooth;}
@@ -96,6 +96,10 @@ ul {
         transform: scale(1.1);      
         filter: brightness(1.15);
         transition: 0.25s ease-in-out;
+    }
+
+    .pics:hover {
+        border: 3px solid white;
     }
 
 }
@@ -224,5 +228,13 @@ footer {
     0% {color: black;}
     50% {color: gray;}
     100% {color: black;}
+    }
+
+    @media (hover: hover) {
+
+    .pics:hover {
+    border: 3px solid black;
+    }
+
     }
 }
