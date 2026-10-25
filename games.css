@@ -19,8 +19,14 @@ body > *:not(footer){
 
 
 @font-face {
-  font-family: "souls";
-  src: url("Assets/other/Seagram\ tfb.ttf");
+  font-family: 'soulslike';
+  src: url('Assets/other/Seagram\ tfb.ttf') format('truetype'); 
+}
+
+@font-face {
+  font-family: 'normal';
+  src: local('Georgia'), local('Times New Roman'), serif;
+  unicode-range: U+0020, U+002D, U+002E, U+0041-005A; /* Ez AI-tol, de utananeztem es ertem*/
 }
 
 html {scroll-behavior: smooth;}
@@ -28,7 +34,7 @@ html {scroll-behavior: smooth;}
 * {
     color: white;
     letter-spacing: 3px;
-    font-family: souls;
+    font-family: 'normal', 'soulslike', serif;
     text-decoration: none;
     box-sizing: border-box;
 }
@@ -120,8 +126,10 @@ footer {
     align-items: center;
     gap: 30px;
     width: 100%;
-    word-spacing: 5px;
+    font-size: larger;
 }
+
+.intro .textnimage:nth-of-type(even) {flex-direction: row-reverse;}
 
 .manualgap {word-spacing: 60px;}
 
@@ -153,7 +161,7 @@ footer {
     flex-direction: column;
     min-height: 250px;
     width: 27.5%;
-    background-color: lightslategrey;
+    background-color: darkslategrey;
     border-radius: 25px;
     overflow-wrap: break-word;
 }
@@ -163,6 +171,8 @@ footer {
     flex-direction: column;
     align-items: center;
 }
+
+.thirdsectionidk .cards:nth-child(odd) {background-color: gray;}
 
 .popularstuff {
     display: flex;
@@ -199,14 +209,22 @@ footer {
 
     .fontexception, .fontexception > * {font-size: 72%;}
 
-    .textnimage {flex-direction: column;}
+    .intro .textnimage:nth-of-type(odd) {flex-direction: column;}
+    .intro .textnimage:nth-of-type(even) {flex-direction: column;}
 
     .mappics {
     max-width: 100%;
     max-height: 600px;
     }
 
-    .cards {min-width: 70%;}
+    .cards {
+        min-width: 70%;
+        min-height: 200px;
+    }
+
+    .intro .pics {margin: 0;}
+    .textnimage {gap: 10px;}
+
 }
 
 
