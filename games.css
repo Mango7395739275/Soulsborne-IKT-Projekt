@@ -18,6 +18,25 @@ body > *:not(footer){
 }
 
 
+
+#oldaltoltes {
+    position: fixed;
+    z-index: 5;
+    inset: 0px;
+    width: 100%;
+
+    opacity: 100%;
+    transition: opacity 1s linear;
+
+    pointer-events: none;
+
+    &.betoltve {
+        opacity: 0%;
+        
+    }
+}
+
+
 @font-face {
   font-family: 'soulslike';
   src: url('Assets/other/Seagram\ tfb.ttf') format('truetype'); 
@@ -205,6 +224,8 @@ footer {
         list-style: none;
         text-decoration: underline;
     }
+
+    body *:not(.fontexception, .fontexception > *) {font-size: 93%;}
 
     .fontexception, .fontexception > * {font-size: 72%;}
 

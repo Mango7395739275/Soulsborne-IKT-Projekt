@@ -1,4 +1,5 @@
 body {
+    position: relative;
     padding-top: 35px;
     display: flex;
     flex-direction: column;
@@ -16,6 +17,26 @@ body > *:not(footer){
     margin: 0 auto;
     width: 90%;
 }
+
+
+
+#oldaltoltes {
+    position: fixed;
+    z-index: 5;
+    inset: 0px;
+    width: 100%;
+
+    opacity: 100%;
+    transition: opacity 1s linear;
+
+    pointer-events: none;
+
+    &.betoltve {
+        opacity: 0%;
+        
+    }
+}
+
 
 
 @font-face {
@@ -237,6 +258,8 @@ footer {
         list-style: none;
         text-decoration: underline;
     }
+
+    body *:not(.fontexception, .fontexception > *) {font-size: 93%;}
 
     .fontexception, .fontexception > * {font-size: 72%;}
 
