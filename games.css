@@ -206,8 +206,6 @@ footer {
         text-decoration: underline;
     }
 
-    body *:not(.fontexception, .fontexception > *) {font-size: 93%;}
-
     .fontexception, .fontexception > * {font-size: 72%;}
 
     .intro .textnimage:nth-of-type(odd) {flex-direction: column;}

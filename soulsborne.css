@@ -238,8 +238,6 @@ footer {
         text-decoration: underline;
     }
 
-    body *:not(.fontexception, .fontexception > *) {font-size: 93%;}
-
     .fontexception, .fontexception > * {font-size: 72%;}
 
 }
