@@ -239,12 +239,17 @@ footer {
     }
 
     .cards {
-        min-width: 70%;
+        min-width: 90%;
         min-height: 200px;
     }
 
-    .intro .pics {margin: 0;}
-    .textnimage {gap: 10px;}
+    .intro .pics {
+        margin: 0px;
+        transform: scale(1.05);
+        margin-bottom: 20px;
+    }
+
+    .textnimage {gap: 20px;}
 
 }
 
